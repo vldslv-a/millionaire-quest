@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎮 Millionaire Quest
 
-## Getting Started
+A "Who Wants to Be a Millionaire" game built with Next.js and TypeScript.
 
-First, run the development server:
+## 📝 Project Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project is an implementation of the classic "Who Wants to Be a Millionaire" game with the following features:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Players answer 12 questions in sequence
+- Each question has at least 4 possible answers with at least one correct answer
+- Correct answers advance players to the next question
+- Incorrect answers take players to the final results screen
+- Responsive design that works from iPhone 8 to 4K displays
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Live Demo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project is published and accessible at [https://millionaire-quest-nine.vercel.app/](https://millionaire-quest-nine.vercel.app/)
 
-## Learn More
+## 🛠️ Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js](https://nextjs.org) - React framework
+- TypeScript - Type safety
+- Custom CSS (no frameworks) - Responsive design
+- JSON configuration - Game questions and settings
+- Vercel - Deployment platform
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔧 Setup & Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/vldslv-a/millionaire-quest.git
+   cd millionaire-quest
+   ```
 
-## Deploy on Vercel
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+## 🏗️ Project Structure
+
+The project uses a standard Next.js App Router structure:
+
+- `src/app/` - Main application code
+- `public/` - Static assets
+- `src/components/` - Reusable UI components
+- `src/data/` - Game configuration in JSON format
+
+## 📋 Original Requirements
+
+**Task**:
+
+Implement the basic functionality of the "Who Wants to Be a Millionaire" game:
+
+- The player answers 12 questions in sequence
+- Each question has at least 4 possible answers and at least one correct one
+- If the answer is correct - the player moves to the next question. If the answer is incorrect - the player is taken to the final screen
+- The final screen should show the overall game result
+- Design is provided [in Figma](https://www.figma.com/file/tIZEZn2HTAeSDQRzoOzvXE/Front-end-test%2C-Headway)
+- Layout should be responsive
+
+**Technical Requirements**:
+
+- Use [this layout](https://www.figma.com/file/tIZEZn2HTAeSDQRzoOzvXE/Front-end-test%2C-Headway) for styling
+- Make the layout responsive (from iPhone 8 to 4K displays)
+- Implement layout without CSS frameworks
+- Game config (questions, answers, money for correct answers, etc.) should be in JSON format
+- Config should be extensible: more or fewer answer options per question, multiple correct answers, etc.
+- Place the result on GitHub with an MD instruction on installation and launch
+- Implement the task using NextJs and deploy on Vercel
+- All client code should fully comply with "out of the box" eslint/airbnb rules
+- All client code should be typed with TypeScript
+
+**Optional**:
+- Add eslint checks on git commit for changed files, and unit tests run on git push
+
+**Evaluation Criteria**:
+- Code that is easy to extend and maintain
+- Architectural organization of the application
+- Correct handling of non-standard situations
+
+## 🚀 Deployment
+
+The project is deployed on Vercel and can be accessed at [https://millionaire-quest-nine.vercel.app/](https://millionaire-quest-nine.vercel.app/).
+
+## 👨‍💻 Development
+
+To contribute to this project:
+
+1. Create a feature branch
+2. Make your changes
+3. Submit a pull request

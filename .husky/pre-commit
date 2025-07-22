@@ -1,0 +1,3 @@
+# Run ESLint on staged files
+echo "Running ESLint on changed files..."
+npm run lint:js:fix:staged
