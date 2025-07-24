@@ -1,0 +1,30 @@
+.game-over-page {
+  height: 100dvh;
+  padding: 48px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    padding: 80px;
+  }
+
+  &__overview {
+    height: 100%;
+  }
+
+  &__title {
+    opacity: 0.5;
+    margin-bottom: 8px;
+  }
+
+  &__actions {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    &__actions {
+      width: 296px;
+    }
+  }
+}

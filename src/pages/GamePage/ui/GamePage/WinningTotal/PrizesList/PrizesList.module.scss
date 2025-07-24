@@ -1,0 +1,25 @@
+.prizes-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  height: 100%;
+  background-color: inherit;
+  padding: 64px 0 16px;
+
+  &__button {
+    &:disabled:disabled {
+      cursor: default;
+    }
+
+    &--received {
+      > span:before {
+        background-color: var(--white-100) !important;
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    background-color: var(--white-100);
+  }
+}

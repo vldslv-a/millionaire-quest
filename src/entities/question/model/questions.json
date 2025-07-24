@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "questionText": "Which JavaScript operator is used to compare both value and type?",
+    "options": [
+      { "id": "A", "text": "==" },
+      { "id": "B", "text": "===" },
+      { "id": "C", "text": "=" },
+      { "id": "D", "text": "!=" }
+    ],
+    "correctAnswer": "B",
+    "prizeAmount": 500
+  },
+  {
+    "id": 2,
+    "questionText": "Which tag is used to create a paragraph in HTML?",
+    "options": [
+      { "id": "A", "text": "<paragraph>" },
+      { "id": "B", "text": "<p>" },
+      { "id": "C", "text": "<text>" },
+      { "id": "D", "text": "<para>" }
+    ],
+    "correctAnswer": "B",
+    "prizeAmount": 1000
+  },
+  {
+    "id": 3,
+    "questionText": "Which HTML attribute is used to define inline styles?",
+    "options": [
+      { "id": "A", "text": "class" },
+      { "id": "B", "text": "style" },
+      { "id": "C", "text": "css" },
+      { "id": "D", "text": "styles" }
+    ],
+    "correctAnswer": "B",
+    "prizeAmount": 2000
+  },
+  {
+    "id": 4,
+    "questionText": "Which symbol is used to write comments in JavaScript?",
+    "options": [
+      { "id": "A", "text": "/* */" },
+      { "id": "B", "text": "//" },
+      { "id": "C", "text": "<!-- -->" },
+      { "id": "D", "text": "Both A and B" }
+    ],
+    "correctAnswer": "D",
+    "prizeAmount": 5000
+  },
+  {
+    "id": 5,
+    "questionText": "What is the correct way to write a JavaScript array?",
+    "options": [
+      { "id": "A", "text": "var colors = 'red', 'green', 'blue'" },
+      { "id": "B", "text": "var colors = ['red', 'green', 'blue']" },
+      { "id": "C", "text": "var colors = (1:'red', 2:'green', 3:'blue')" },
+      { "id": "D", "text": "var colors = 1 = 'red', 2 = 'green', 3 = 'blue'" }
+    ],
+    "correctAnswer": "B",
+    "prizeAmount": 10000
+  },
+  {
+    "id": 6,
+    "questionText": "Which JavaScript method is used to select an element by its ID?",
+    "options": [
+      { "id": "A", "text": "getElementById()" },
+      { "id": "B", "text": "querySelector()" },
+      { "id": "C", "text": "getElement()" },
+      { "id": "D", "text": "selectById()" }
+    ],
+    "correctAnswer": "A",
+    "prizeAmount": 20000
+  },
+  {
+    "id": 7,
+    "questionText": "Which CSS property is used to change text color?",
+    "options": [
+      { "id": "A", "text": "color" },
+      { "id": "B", "text": "text-color" },
+      { "id": "C", "text": "font-color" },
+      { "id": "D", "text": "background-color" }
+    ],
+    "correctAnswer": "A",
+    "prizeAmount": 50000
+  },
+  {
+    "id": 8,
+    "questionText": "Which hook is used to manage state in React?",
+    "options": [
+      { "id": "A", "text": "useEffect" },
+      { "id": "B", "text": "useState" },
+      { "id": "C", "text": "useContext" },
+      { "id": "D", "text": "useCallback" }
+    ],
+    "correctAnswer": "B",
+    "prizeAmount": 100000
+  },
+  {
+    "id": 9,
+    "questionText": "What method is used to add an event listener in JavaScript?",
+    "options": [
+      { "id": "A", "text": "addEvent()" },
+      { "id": "B", "text": "addEventListener()" },
+      { "id": "C", "text": "attachEvent()" },
+      { "id": "D", "text": "onEvent()" }
+    ],
+    "correctAnswer": "B",
+    "prizeAmount": 200000
+  },
+  {
+    "id": 10,
+    "questionText": "What file extension is used for TypeScript files?",
+    "options": [
+      { "id": "A", "text": ".js" },
+      { "id": "B", "text": ".jsx" },
+      { "id": "C", "text": ".ts" },
+      { "id": "D", "text": ".typescript" }
+    ],
+    "correctAnswer": "C",
+    "prizeAmount": 500000
+  },
+  {
+    "id": 11,
+    "questionText": "Which JavaScript keyword is used to declare a constant?",
+    "options": [
+      { "id": "A", "text": "var" },
+      { "id": "B", "text": "let" },
+      { "id": "C", "text": "const" },
+      { "id": "D", "text": "final" }
+    ],
+    "correctAnswer": "C",
+    "prizeAmount": 750000
+  },
+  {
+    "id": 12,
+    "questionText": "What does TypeScript add to JavaScript?",
+    "options": [
+      { "id": "A", "text": "Better performance" },
+      { "id": "B", "text": "Static type checking" },
+      { "id": "C", "text": "New syntax" },
+      { "id": "D", "text": "Mobile support" }
+    ],
+    "correctAnswer": "B",
+    "prizeAmount": 1000000
+  }
+]

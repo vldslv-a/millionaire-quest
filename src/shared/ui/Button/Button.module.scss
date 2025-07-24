@@ -1,0 +1,283 @@
+@use 'sass:map';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  outline: none;
+  position: relative;
+  z-index: initial;
+}
+
+.button__content {
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.button--fullWidth {
+  width: 100%;
+}
+
+.button--variant-icon.button--variant-icon {
+  .button__content {
+    background-color: transparent;
+  }
+}
+
+.button--variant-option {
+  .button__content {
+    margin: 0 17px;
+    padding: 20px 24px;
+    position: relative;
+    clip-path: url(#hexClip);
+    z-index: 3;
+
+    &:before {
+      content: '';
+      clip-path: url(#hexClip);
+      background-color: var(--white-100);
+      position: absolute;
+      top: 2px;
+      bottom: 2px;
+      left: 2.5px;
+      right: 2.5px;
+      z-index: -1;
+    }
+
+    @media (min-width: 768px) {
+      padding: 24.5px 32px;
+    }
+  }
+
+  .button--size-small {
+    padding: 8px 24px;
+    margin: 0 20%;
+  }
+
+  &:after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+  }
+}
+
+.button--variant-primary {
+  .button__content {
+    padding: 16px 24px;
+
+    @media (min-width: 768px) {
+      padding: 20px 24px;
+    }
+  }
+}
+
+.button__prefix,
+.button__suffix {
+  display: inline-flex;
+}
+
+@mixin button-primary-color($color, $hover-color, $active-color) {
+  .button__content {
+    background-color: $color;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $hover-color;
+    }
+
+    &:active {
+      background-color: $active-color;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    .button__content {
+      background-color: var(--black-40);
+    }
+  }
+}
+
+.button--variant-primary.button--color-primary {
+  @include button-primary-color(var(--orange-100), var(--orange-80), var(--orange-120));
+}
+
+.button--variant-primary.button--color-negative {
+  @include button-primary-color(var(--red-100), var(--orange-80), var(--red-100));
+}
+
+.button--variant-primary.button--color-positive {
+  @include button-primary-color(var(--green-100), var(--orange-80), var(--green-100));
+}
+
+@mixin button-option-color(
+  $color,
+  $before-hover-color,
+  $border-hover-color,
+  $border-active-color,
+  $before-active-color
+) {
+  .button__content {
+    background-color: $color;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $border-hover-color;
+
+      &:before {
+        background-color: $before-hover-color;
+      }
+    }
+
+    &:active {
+      background-color: $border-active-color;
+
+      &:before {
+        background-color: $before-active-color;
+      }
+    }
+  }
+
+  &:after {
+    background-color: $color;
+  }
+
+  &:hover,
+  &:focus-visible {
+    &:after {
+      background-color: $border-hover-color;
+    }
+  }
+
+  &:active {
+    &:after {
+      background-color: $border-active-color;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    .button__content {
+      background-color: var(--black-40);
+
+      &:before {
+        background-color: var(--black-5);
+      }
+    }
+
+    &:after {
+      background-color: var(--black-40);
+    }
+  }
+}
+
+.button--variant-option.button--color-primary {
+  @include button-option-color(var(--black-40), var(--orange-5), var(--orange-80), var(--orange-120), var(--orange-5));
+}
+
+.button--variant-option.button--color-negative {
+  @include button-option-color(var(--black-40), var(--orange-5), var(--orange-80), var(--red-100), var(--red-5));
+}
+
+.button--variant-option.button--color-positive {
+  @include button-option-color(var(--black-40), var(--orange-5), var(--orange-80), var(--green-100), var(--green-5));
+}
+
+@mixin blink-animation($name, $start-color, $end-color) {
+  @keyframes #{$name} {
+    0%,
+    100% {
+      background-color: $start-color;
+    }
+    50% {
+      background-color: $end-color;
+    }
+  }
+}
+
+@mixin blink-before-animation($name, $start-color, $end-color) {
+  @keyframes #{$name} {
+    0%,
+    100% {
+      background-color: $start-color;
+    }
+    50% {
+      background-color: $end-color;
+    }
+  }
+}
+
+$blink-types: (
+  primary: (
+    color: var(--orange-100),
+    end: var(--orange-120),
+    before: var(--orange-5),
+  ),
+  negative: (
+    color: var(--red-100),
+    end: color-mix(in srgb, var(--red-100) 80%, white),
+    before: var(--red-5),
+  ),
+  positive: (
+    color: var(--green-100),
+    end: color-mix(in srgb, var(--green-100) 80%, white),
+    before: var(--green-5),
+  ),
+);
+
+@mixin blink-animation($name, $start-color, $end-color) {
+  @keyframes #{$name} {
+    0%,
+    100% {
+      background-color: $start-color;
+    }
+    50% {
+      background-color: $end-color;
+    }
+  }
+}
+
+@each $type, $props in $blink-types {
+  $color: map.get($props, color);
+  $end: map.get($props, end);
+  $before: map.get($props, before);
+
+  @include blink-animation(blink-#{$type}, $color, $end);
+  @include blink-animation(blink-#{$type}Before, var(--background), $before);
+  @include blink-animation(blink-#{$type}After, $color, $end);
+
+  .button.button--blinking.button--variant-primary.button--color-#{$type} .button__content {
+    animation: blink-#{$type} 1s infinite ease-in-out;
+  }
+  .button.button--blinking.button--variant-option.button--color-#{$type} .button__content:before {
+    animation: blink-#{$type}Before 1s infinite ease-in-out;
+  }
+  .button.button--blinking.button--variant-option.button--color-#{$type} {
+    .button__content {
+      background-color: $color;
+    }
+
+    &:after {
+      animation: blink-#{$type}After 1s infinite ease-in-out;
+    }
+  }
+}

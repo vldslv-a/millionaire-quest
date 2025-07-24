@@ -31,12 +31,14 @@ The project is published and accessible at [https://millionaire-quest-nine.verce
 ## 🔧 Setup & Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/vldslv-a/millionaire-quest.git
    cd millionaire-quest
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    # or
@@ -46,6 +48,7 @@ The project is published and accessible at [https://millionaire-quest-nine.verce
    ```
 
 3. Run the development server:
+
    ```bash
    npm run dev
    # or
@@ -79,33 +82,15 @@ The project is published and accessible at [https://millionaire-quest-nine.verce
 
 ```
 src/
-├── app/                          # Next.js App Router
-│   ├── config/
-│   │   ├── styles/              # Modular SCSS files
-│   │   │   ├── _variables.scss  # CSS custom properties
-│   │   │   ├── _base.scss       # Base styles and resets
-│   │   │   ├── _typography.scss # Text styling with BEM
-│   │   │   ├── _buttons.scss    # Button components
-│   │   │   └── _links.scss      # Link styling
-│   │   └── globals.scss         # Main stylesheet
-│   ├── ui/
-│   │   └── RootLayout/          # App layout component
-│   ├── layout.tsx               # Root layout
-│   ├── page.tsx                 # Home page
-│   ├── error.tsx                # Error boundary
-│   └── not-found.tsx            # 404 page
-├── data/
-│   └── questions.json           # Game configuration
-├── pages/                       # Page components
-│   ├── ErrorPage/
-│   ├── GameStartPage/
-│   └── NotFoundPage/
-└── shared/
-    └── utils/                   # Utility functions
-        ├── styles/
-        │   └── cx.ts            # CSS class utility
-        └── object/
-            └── entries/         # Object utilities
+├── app/                          # Next.js App Router (entrypoint)
+├── entities/                     # Business entities (gameStats, question)
+├── pages/                        # Page wrappers (ErrorPage, GamePage, ...)
+├── shared/
+│   ├── assets/                   # Icons, images
+│   ├── lib/                      # Hooks, utilities (useTimeout, useMediaQuery, ...)
+│   ├── ui/                       # Shared UI components (Button, Drawer, ...)
+└── widgets/
+test/                             # Test mocks, setup files
 ```
 
 ### Architecture Principles
@@ -119,21 +104,27 @@ src/
 ## 🎨 Styling Architecture
 
 ### BEM Methodology
+
 The project uses BEM (Block Element Modifier) naming convention:
 
 ```scss
 // Block
-.button { }
+.button {
+}
 
 // Element
-.button__text { }
+.button__text {
+}
 
 // Modifier
-.button--primary { }
-.button--disabled { }
+.button--primary {
+}
+.button--disabled {
+}
 ```
 
 ### SCSS Structure
+
 - **Variables** - CSS custom properties for theming
 - **Base** - Reset and base styles
 - **Components** - Modular component styles
@@ -184,34 +175,3 @@ The project is automatically deployed on Vercel:
 - **Production**: [https://millionaire-quest-nine.vercel.app/](https://millionaire-quest-nine.vercel.app/)
 - **Preview deployments** for all pull requests
 - **Automatic builds** on main branch updates
-
-## 👨‍💻 Contributing
-
-To contribute to this project:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/new-feature`
-3. Make your changes following the established patterns
-4. Ensure tests pass: `npm test`
-5. Commit your changes (triggers pre-commit hooks)
-6. Push to your branch (triggers pre-push hooks)
-7. Submit a pull request
-
-### Development Tips
-
-- Follow the existing folder structure
-- Write tests for new components
-- Use BEM naming for CSS classes
-- Ensure TypeScript strict mode compliance
-- Update documentation when needed
-
-## 🎯 Future Enhancements
-
-Potential areas for improvement:
-
-- **Game Logic**: Implement the actual game mechanics
-- **Animations**: Add smooth transitions and micro-interactions
-- **Accessibility**: Enhanced keyboard navigation and screen reader support
-- **Internationalization**: Multi-language support
-- **Sound Effects**: Audio feedback for interactions
-- **Leaderboard**: Score tracking and competitive features

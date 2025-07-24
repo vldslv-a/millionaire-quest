@@ -1,0 +1,71 @@
+.typography {
+  font-family: var(--font-inter), 'Inter', Arial, Helvetica, sans-serif;
+  letter-spacing: 0%;
+  line-height: 115.99%;
+  margin: 0;
+  padding: 0;
+
+  &_h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--black-100);
+
+    @media (min-width: 1024px) {
+      font-size: 56px;
+    }
+  }
+
+  &_h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--black-100);
+
+    @media (min-width: 1024px) {
+      font-size: 32px;
+    }
+  }
+
+  &_body {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black-100);
+  }
+
+  &_button {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white-100);
+
+    @media (min-width: 1024px) {
+      font-size: 20px;
+    }
+  }
+
+  &_primary {
+    color: var(--black-100);
+  }
+
+  &_white {
+    color: var(--text-white);
+  }
+
+  &_secondary {
+    color: var(--black-40);
+  }
+
+  &_orange {
+    color: var(--orange-100);
+  }
+
+  &_button-color {
+    color: var(--white-100);
+  }
+
+  &_bold {
+    font-weight: 600;
+  }
+
+  &_normal {
+    font-weight: 400;
+  }
+}

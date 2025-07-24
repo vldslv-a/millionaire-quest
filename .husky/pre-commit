@@ -1,3 +1,9 @@
 # Run ESLint on staged files
 echo "Running ESLint on changed files..."
 npm run lint:js:fix:staged
+
+echo "Running TypeScript checks types..."
+npm run check-types
+
+echo "Searching for unused dependencies..."
+npm run knip

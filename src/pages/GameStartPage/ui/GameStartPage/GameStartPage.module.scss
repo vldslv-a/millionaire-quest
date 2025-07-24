@@ -1,0 +1,22 @@
+.game-start-page {
+  height: 100dvh;
+  background: linear-gradient(to bottom right, var(--white-100) 50%, var(--orange-5) 0);
+  padding: 48px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__overview {
+    height: 100%;
+  }
+
+  &__actions {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    &__actions {
+      width: 296px;
+    }
+  }
+}
