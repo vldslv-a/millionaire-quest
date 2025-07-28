@@ -1,4 +1,4 @@
-import { useSessionStorage } from '@/shared/lib/storage/useSessionStorage';
+import { useSessionStorage } from 'use-storage-hooks';
 
 export type GameStats = {
   score: number;
